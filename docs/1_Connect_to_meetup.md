@@ -274,7 +274,7 @@ void fetchEvents() {
   //
   final String url = EVENTS_URL +
       mapToQueryParam({
-        "fields": "featured_photo,plain_text_description",
+        "fields": "featured_photo,plain_text_description", // Tells Meetup to include the event photo and a raw text description
         "key": MEETUP_API_KEY,
         "lat": -19.26639,
         "lon": 146.80569,
