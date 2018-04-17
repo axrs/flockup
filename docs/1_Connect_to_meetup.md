@@ -156,6 +156,7 @@ Widget buildHome(BuildContext context, Map appDb) {
 ```
 
 Flockup should now resemble something like:
+
 ![Image](./images/1_1.jpg)
 
 #### Fetching Events from Meetup
@@ -336,6 +337,7 @@ class Flockup extends StatelessWidget {
 ```
 
 If all went well, we should now have a count of upcoming events
+
 ![Image](./images/1_2.jpg)
 
 [NEXT](2_Home_layout.md)
