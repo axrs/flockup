@@ -298,6 +298,9 @@ void fetchEvents() {
 3. Create a simple `mapToQueryParam` helper function to keep our URL readable, and remove any null values.
 
 ```dart
+//
+// Takes a map `{"key": "value", "other": "thing"}` and converts it to `?key=value&other=thing`
+//
 String mapToQueryParam(Map params) {
   return "?" +
       params.entries
@@ -321,7 +324,7 @@ class Flockup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    fetchEvents(); // Now fetch events on load
+    fetchEvents();       //<----- NEW
     return MaterialApp(
         title: 'Flockup',
         theme: ThemeData(

@@ -48,8 +48,8 @@ Widget buildHome(BuildContext context, Map appDb) {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          new Expanded(                         // NEW
-            child: new EventListWidget(events), // NEW
+          new Expanded(                         // <----- NEW
+            child: new EventListWidget(events), // <----- NEW
           ),
         ],
       ),
@@ -62,6 +62,7 @@ Widget buildHome(BuildContext context, Map appDb) {
 Finally, create the `buildEventListItem` to create the widgets for each individual event
 
 3. Start by creating the event footer
+
 ![Image](./images/2_1.jpg)
 
 ```dart
@@ -118,6 +119,7 @@ Widget buildEventListItem(BuildContext context, Map event) {
 ```
 
 4. Now lets add a header
+
 ![Image](./images/2_2.jpg)
 
 ```dart
@@ -162,7 +164,7 @@ Widget buildEventListItem(BuildContext context, Map event) {
   return new Padding(
     padding: const EdgeInsets.only(bottom: 8.0),
     child: Column(children: <Widget>[
-      header,
+      header,       // <----- NEW
       footer,
     ]),
   );
@@ -170,6 +172,7 @@ Widget buildEventListItem(BuildContext context, Map event) {
 ```
 
 5. Finally, add an event image, or a grey box if the image is missing
+
 ![Image](./images/2_3.jpg)
 
 ```dart
@@ -203,7 +206,7 @@ Widget buildEventListItem(BuildContext context, Map event) {
     padding: const EdgeInsets.only(bottom: 8.0),
     child: Column(children: <Widget>[
       header,
-      imageOrPlaceholder(),
+      imageOrPlaceholder(),    // <----- NEW
       footer,
     ]),
   );
