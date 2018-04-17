@@ -156,7 +156,7 @@ Widget buildHome(BuildContext context, Map appDb) {
 ```
 
 Flockup should now resemble something like:
-![Image](../blob/master/docs/images/1_1.jpg?raw=true)
+![Image](./images/1_1.jpg)
 
 #### Fetching Events from Meetup
 Now it's time to put the API key to good use by fetching upcoming events using https://secure.meetup.com/meetup_api/console/?path=/find/upcoming_events.
@@ -336,6 +336,6 @@ class Flockup extends StatelessWidget {
 ```
 
 If all went well, we should now have a count of upcoming events
-![Image](blob/master/docs/images/1_1.jpg?raw=true)
+![Image](./images/1_2.jpg)
 
 [NEXT](2_Home_layout.md)
