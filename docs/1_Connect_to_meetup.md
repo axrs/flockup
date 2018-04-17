@@ -336,6 +336,6 @@ class Flockup extends StatelessWidget {
 ```
 
 If all went well, we should now have a count of upcoming events
-![Image](../blob/master/docs/images/1_2.jpg?raw=true)
+![Image](blob/master/docs/images/1_1.jpg?raw=true)
 
 [NEXT](2_Home_layout.md)
