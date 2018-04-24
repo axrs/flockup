@@ -251,7 +251,10 @@ Our app should now have some basic information about the event
 ![Image](./images/3_3.jpg)
 
 4. Finally, let's add in the event image again to bring some colour to the page. For reuseability, move the
-   `imageOrPlaceholder` function into a `ui.dart` and tweak it to take an event map.
+   `imageOrPlaceholder` function out of our `main.dart` and move it into a `ui.dart`. Tweak the function to accept and
+   event map as the argument and extract the photo from that event.
+
+   > Don't forget to include the `package:flutter/material.dart` in `ui.dart` and update `main.dart` to reflect the changed function location
 
 ```dart
 //event_details.dart
