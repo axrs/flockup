@@ -1,5 +1,6 @@
 import 'package:feather/feather.dart';
 import 'package:flockup/actions.dart';
+import 'package:flockup/event_details.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(new Flockup());
@@ -150,12 +151,24 @@ Widget buildEventListItem(BuildContext context, Map event) {
     );
   }
 
+  Widget inkwellIfPublic(Widget child) {
+    if (!isPublic) {
+      return child;
+    }
+    return new InkWell(
+      onTap: () => navTo(context, new EventDetails(event)),
+      child: child,
+    );
+  }
+
   return new Padding(
     padding: const EdgeInsets.only(bottom: 8.0),
-    child: Column(children: <Widget>[
-      header,
-      imageOrPlaceholder(),
-      footer,
-    ]),
+    child: inkwellIfPublic(
+      Column(children: <Widget>[
+        header,
+        imageOrPlaceholder(),
+        footer,
+      ]),
+    ),
   );
 }

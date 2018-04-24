@@ -9,7 +9,7 @@ a count.
 ```dart
 class EventListWidget extends StatelessWidget {
   //
-  // Keep a list of events (passed in by the constructor
+  // Keep a list of events (passed in by the constructor)
   //
   final List<Map> events;
   final ScrollController scrollController;

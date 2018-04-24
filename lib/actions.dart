@@ -2,6 +2,7 @@ import 'dart:convert' show JSON;
 
 import 'package:feather/feather.dart';
 import 'package:flockup/config.dart';
+import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 String mapToQueryParam(Map params) {
@@ -30,4 +31,12 @@ void fetchEvents() {
     var events = get(body, 'events');
     AppDb.dispatch((Map store) => merge(store, {"events": events}));
   });
+}
+
+void navTo(context, view) {
+  Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => view,
+      ));
 }
