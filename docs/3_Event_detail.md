@@ -140,7 +140,7 @@ List<Widget> overviewSection(context, event) {
   //
   if (isNotNull(details)) {
     return [
-      Text(
+      new Text(
         'OVERVIEW',
         style: theme.body2,
       ),
@@ -149,7 +149,7 @@ List<Widget> overviewSection(context, event) {
           vertical: 8.0,
         ),
       ),
-      Text(details),
+      new Text(details),
     ];
   }
 }
