@@ -20,7 +20,7 @@ class EventListWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     //
     // The EventListWidget will just return a new ListView of our events.
-    // We will delegate the Widgets hirerarchy builder to a seperate event
+    // We will delegate the Widgets hierarchy builder to a separate event
     //
     return new ListView.builder(
       itemCount: events.length,
