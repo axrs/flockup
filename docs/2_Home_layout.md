@@ -63,8 +63,6 @@ Finally, create the `buildEventListItem` to create the widgets for each individu
 
 3. Start by creating the event footer
 
-![Image](./images/2_1.jpg)
-
 ```dart
 Widget buildEventListItem(BuildContext context, Map event) {
   //
@@ -118,9 +116,11 @@ Widget buildEventListItem(BuildContext context, Map event) {
 }
 ```
 
-4. Now lets add a header
+It should look something like:
 
-![Image](./images/2_2.jpg)
+![Image](./images/2_1.jpg)
+
+4. Now lets add a header
 
 ```dart
 Widget buildEventListItem(BuildContext context, Map event) {
@@ -171,9 +171,11 @@ Widget buildEventListItem(BuildContext context, Map event) {
 }
 ```
 
-5. Finally, add an event image, or a grey box if the image is missing
+It should look something like:
 
-![Image](./images/2_3.jpg)
+![Image](./images/2_2.jpg)
+
+5. Finally, add an event image, or a grey box if the image is missing
 
 ```dart
 Widget buildEventListItem(BuildContext context, Map event) {
@@ -212,5 +214,9 @@ Widget buildEventListItem(BuildContext context, Map event) {
   );
 }
 ```
+
+It should look something like:
+
+![Image](./images/2_3.jpg)
 
 [NEXT](3_Event_detail.md)
