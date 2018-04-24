@@ -4,7 +4,7 @@ Flutter meets Meetup. What could go wrong?
 
 ## Prerequisites
 * A laptop with Flutter [install flutter](https://flutter.io/get-started/install)
-* Android Studio, IntelliJ, or VS Code with Flutter Plugins [Getting Started with Android Studio](https://flutter.io/get-started/editor/#androidsstudio)
+* Android Studio, IntelliJ, or VS Code with Flutter Plugins [Getting Started with the editor](https://flutter.io/get-started/editor/)
 * Android/iOS Simulator (or a physical device if you're familiar)
 * A familiarity with Git and GitHub
 * An open mind to new technology and tools
