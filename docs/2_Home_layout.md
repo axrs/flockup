@@ -69,7 +69,9 @@ Widget buildEventListItem(BuildContext context, Map event) {
   // Extract data from the event
   //
   final String time = get(event, 'local_time', '');
-  final String visibility = get(event, 'visibility');
+  final bool isPublic = get(event, 'visibility') == 'public';
+  final IconData visibilityIcon = isPublic ? Icons.lock_open : Icons.lock;
+  final TextTheme theme = Theme.of(context).accentTextTheme;
 
   //
   // Build the Footer Widgets
