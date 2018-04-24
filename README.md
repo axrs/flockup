@@ -9,9 +9,9 @@ Flutter meets Meetup. What could go wrong?
 
 ## Getting Started
 
-1. Phase 1 [Getting Meetup Events](1_Connect_to_meetup.md)
-2. Phase 2 [Showing The Event Listings](2_Home_layout.md)
-3. Phase 3 [Event Detail](3_Event_detail.md)
+1. Phase 1 [Getting Meetup Events](./docs/1_Connect_to_meetup.md)
+2. Phase 2 [Showing The Event Listings](./docs/2_Home_layout.md)
+3. Phase 3 [Event Detail](./docs/3_Event_detail.md)
 
 ## Potential Final Product
 
