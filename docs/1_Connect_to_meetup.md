@@ -97,7 +97,6 @@ our root widget `Flockup`
 ```dart
 //lib/main.dart
 import 'package:feather/feather.dart';
-import 'package:flockup/config.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(new Flockup());
