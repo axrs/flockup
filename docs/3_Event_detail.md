@@ -255,7 +255,7 @@ Our app should now have some basic information about the event
 
 ```dart
 //event_details.dart
-import 'package:flutter/ui.dart';
+import 'package:flockup/ui.dart';
 
 ...
 
