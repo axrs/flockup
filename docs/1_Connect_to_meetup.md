@@ -1,4 +1,12 @@
 # Phase 1
+## Create a new project
+
+Using your editor of choice, create an new flutter project. The steps for intelliJ are included below:
+
+![Image](./images/setup_1.jpg)
+
+![Image](./images/setup_2.jpg)
+
 ## Getting Meetup Events
 
 ### Add Dependencies
@@ -35,6 +43,9 @@ flutter:
   uses-material-design: true
 ```
 
+At this stage, your editor should detect a dependency change and ask to install the new packages. You'll want to do this.
+Alternatively, you can jump into the terminal and run `flutter packages get`
+
 ### Get a Meetup API Key
 
 Head over to https://secure.meetup.com/meetup_api/key/ to get yourself an API key. Keep this in a safe place and avoid
@@ -50,15 +61,19 @@ const String MEETUP_API_KEY = "<Your Token Here>";
 This Flockup guide is built with a reactive flow, or perpetual loop in mind.
 
 1. Event dispatch
+
    _An event is sent when something happens - the user taps a widget._
 
 2. Event handling
+
    _In response to an event, an application must decide what action to take._
 
 3. Query
+
    _Extracting data from "app state", and providing it in the right format for view functions._
 
 4. View
+
    _One or more view functions (or widgets) that compute the UI that should be displayed._
 
 To achieve this, the "app state" is stored in memory (as a hash-map), and provided to each widget in the UI tree. The
@@ -73,6 +88,7 @@ state" changes, the entire view tree will be re-created as needed.
   those most likely to become unreachable quickly.
 
 #### App UI Setup
+
 Let's remove the boilerplace code in `lib/main.dart` and change it to adopt the flow outlined above.
 
 1. Start by creating a main function. This is going to be the entry point into our Flutter Application, and construct
@@ -89,7 +105,7 @@ void main() => runApp(new Flockup());
 ```
 
 2. Next we need to create our root `Flockup` class. The aim of this widget is establish a "state stream", and respond to
-   any state changes by triging a rebuild. This is achieved by creating a `AppDbStream` and leveraging the
+   any state changes by triggering a rebuild. This is achieved by creating a `AppDbStream` and leveraging the
    `StreamBuilder` classes.
 
 ```dart
@@ -160,6 +176,7 @@ Flockup should now resemble something like:
 ![Image](./images/1_1.jpg)
 
 #### Fetching Events from Meetup
+
 Now it's time to put the API key to good use by fetching upcoming events using https://secure.meetup.com/meetup_api/console/?path=/find/upcoming_events.
 We should be able to retrieve a list of events near a provided latitude and longitude.
 
