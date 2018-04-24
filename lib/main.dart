@@ -1,6 +1,7 @@
 import 'package:feather/feather.dart';
 import 'package:flockup/actions.dart';
 import 'package:flockup/event_details.dart';
+import 'package:flockup/ui.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(new Flockup());
@@ -131,26 +132,6 @@ Widget buildEventListItem(BuildContext context, Map event) {
     ),
   );
 
-  Widget imageOrPlaceholder() {
-    final String photo = getIn(event, ['featured_photo', 'photo_link']);
-    return new AspectRatio(
-      aspectRatio: 16.0 / 9.0,
-      child: ifVal(
-          photo,
-          (_) => Image.network(
-                photo,
-                fit: BoxFit.cover,
-              ),
-          (_) => Container(
-                color: Colors.grey.withOpacity(0.3),
-                child: new Icon(
-                  Icons.image,
-                  size: 44.0,
-                ),
-              )),
-    );
-  }
-
   Widget inkwellIfPublic(Widget child) {
     if (!isPublic) {
       return child;
@@ -166,7 +147,7 @@ Widget buildEventListItem(BuildContext context, Map event) {
     child: inkwellIfPublic(
       Column(children: <Widget>[
         header,
-        imageOrPlaceholder(),
+        imageOrPlaceholder(event),
         footer,
       ]),
     ),
