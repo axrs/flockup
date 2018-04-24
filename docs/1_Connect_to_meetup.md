@@ -305,7 +305,7 @@ void fetchEvents() {
   //
   http.get(url).then((response) {
     var body = JSON.decode(response.body);
-    var events = get(body, 'events'));
+    var events = get(body, 'events');
     AppDb.dispatch(
         (Map store) => merge(store, {"events": events}));
   });
