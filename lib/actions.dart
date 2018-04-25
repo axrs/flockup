@@ -1,4 +1,4 @@
-import 'dart:convert' show JSON;
+import 'dart:convert' show json;
 
 import 'package:feather/feather.dart';
 import 'package:flockup/config.dart';
@@ -27,7 +27,7 @@ void fetchEvents() {
       });
 
   http.get(url).then((response) {
-    var body = JSON.decode(response.body);
+    var body = json.decode(response.body);
     var events = get(body, 'events');
     AppDb.dispatch((Map store) => merge(store, {"events": events}));
   });
