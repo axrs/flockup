@@ -270,8 +270,8 @@ Depending on the Meetup events visibility (public, public_limited, or private), 
    complete.
 
 ```dart
-// Imports only `JSON` from the `dart:convert` package
-import 'dart:convert' show JSON;
+// Imports only `json` from the `dart:convert` package
+import 'dart:convert' show json;
 
 // Imports the entire feather package
 import 'package:feather/feather.dart';
@@ -305,7 +305,7 @@ void fetchEvents() {
   // Note: The merge function combines two key/value maps, overriding keys from the latter values
   //
   http.get(url).then((response) {
-    var body = JSON.decode(response.body);
+    var body = json.decode(response.body);
     var events = get(body, 'events');
     AppDb.dispatch(
         (Map store) => merge(store, {"events": events}));
