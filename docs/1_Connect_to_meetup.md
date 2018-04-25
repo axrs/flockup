@@ -270,8 +270,10 @@ Depending on the Meetup events visibility (public, public_limited, or private), 
    complete.
 
 ```dart
+// Imports only `JSON` from the `dart:convert` package
 import 'dart:convert' show JSON;
 
+// Imports the entire feather package
 import 'package:feather/feather.dart';
 //
 // The MEETUP_API_KEY should be available after importing `config.dart`

@@ -151,6 +151,8 @@ List<Widget> overviewSection(context, event) {
       ),
       new Text(details),
     ];
+  } else {
+    return null;
   }
 }
 
@@ -232,6 +234,8 @@ List<Widget> venueSection(context, event) {
       new Text(address),
       spacer,
     ];
+  } else {
+    return null;
   }
 }
 
