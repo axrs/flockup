@@ -166,6 +166,14 @@ class EventDetails extends StatelessWidget {
     ...
     //
     // Create a new list for all our detail widgets, then add everything created by the `overviewSection` to it
+    // Take note here of the `Cascade` notation (or `..`). Cascades allow us to make a sequence of operations on
+    // the same object.
+    //
+    // final List<Widget> details = []..addAll(overviewSection(context, event));
+    //
+    // is the same as:
+    // final List<Widget> details = [];
+    // details.addAll(overviewSection(context, event));
     //
     final List<Widget> details = []..addAll(overviewSection(context, event));
     ...
